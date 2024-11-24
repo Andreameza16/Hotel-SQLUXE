@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel - Habitaciones Disponibles</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='habitacionestyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.JPG') }}" alt="Hotel SQLuxe">
+            <span>Hotel SQLUXE</span>
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav class="nav-links">
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Habitaciones</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+    <main>
+        <section id="rooms" class="rooms">
+            <h2>Más Elegidas</h2>
+            <br>
+            <br>
+            <div class="room-list">
+                <!-- Habitación Suite -->
+                <div class="room">
+                    <img src="{{ url_for('static', filename='images/suite.jpeg') }}" alt="Hotel SQLuxe">
+                    <h3>Suite</h3>
+                    <p>Una experiencia de lujo con todas las comodidades.</p>
+                    <p><strong>Precio por noche: $200</strong></p>
+                    <a href="/habitaciones/suite" class="btn">Reservar Ahora</a>
+                </div>
+    
+                <!-- Habitación Familiar -->
+                <div class="room">
+                    <img src="{{ url_for('static', filename='images/familiar.jpeg') }}" alt="Hotel SQLuxe">
+                    <h3>Familiar</h3>
+                    <p>Espaciosa y cómoda para toda la familia.</p>
+                    <p><strong>Precio por noche: $150</strong></p>
+                    <a href="/habitaciones/familiar" class="btn">Reservar Ahora</a>
+                </div>
+    
+                <!-- Habitación Pareja -->
+                <div class="room">
+                    <img src="{{ url_for('static', filename='images/pareja.jpeg') }}" alt="Hotel SQLuxe">
+                    <h3>Pareja</h3>
+                    <p>Un ambiente acogedor y romántico.</p>
+                    <p><strong>Precio por noche: $120</strong></p>
+                    <a href="/habitaciones/pareja" class="btn">Reservar Ahora</a>
+                </div>
+    
+                <!-- Habitación Individual -->
+                <div class="room">
+                    <img src="{{ url_for('static', filename='images/indiv.JPG') }}" alt="Hotel SQLuxe">
+                    <h3>Individual</h3>
+                    <p>Perfecta para viajeros individuales.</p>
+                    <p><strong>Precio por noche: $80</strong></p>
+                    <a href="/habitaciones/individual" class="btn">Reservar Ahora</a>
+                </div>
+    
+                <!-- Habitación Doble -->
+                <div class="room">
+                    <img src="{{ url_for('static', filename='images/doble.jpeg') }}" alt="Hotel SQLuxe">
+                    <h3>Doble</h3>
+                    <p>Ideal para compartir con comodidad.</p>
+                    <p><strong>Precio por noche: $100</strong></p>
+                    <a href="/habitaciones/doble" class="btn">Reservar Ahora</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div class="subscribe-container">
+        <aside class="sidebar">
+            <ul>
+                <li>Inicio</li>
+                <li>Servicios</li>
+                <li>Nosotros</li>
+                <li>Habitaciones</li>
+                <li>Contacto</li>
+            </ul>
+            <div class="social-media">
+                <img src="{{ url_for('static', filename='images/Facebook.png') }}" alt="fb">
+                <img src="{{ url_for('static', filename='images/Youtube.png') }}" alt="yt">
+                <img src="{{ url_for('static', filename='images/Whatsapp.png') }}" alt="whats">
+            </div>
+        </aside>
+
+        <section class="subscribe-section">
+            <h1>Suscríbete</h1>
+            <p>Disfruta de recibir notificaciones de descuentos y promociones especiales en nuestras habitaciones y servicios.</p>
+            <form method="POST" action="/subscribe">
+                <input type="email" name="email" placeholder="Ingresa tu correo" required>
+                <button type="submit">Suscríbeme</button>
+            </form>
+        </section>
+
+        <aside class="sidebar right">
+            <ul>
+                <div class="link_pf">
+                    <a href="pf.html">Preguntas Frecuentes</a>
+                </div>
+                <div class="link_html">
+                    <a href="rght.html">Reglas del Hotel</a>
+                </div>
+                <div class="link_html">
+                    <a href="uhl.html">Ubicación</a>
+                </div>
+            </ul>
+        </aside>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Flask==2.3.3
+pyodbc==5.0.1
+pip install Flask
+pip install pyodbc
+
+#IMPORTANTE: Instala el driver ODBC en tu sistema:
+# - Windows: https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server
+
+#IMPORTANTE: Compilar en SQL SERVER el script de tablas de la base de datos HOTEL_SQLUXE_CS50:
+#TABLASSQLUXE.sql
+#IMPORTANTE: Compilar en SQL SERVER el script de las inserciones a las tablas de la base de datos HOTEL_SQLUXE_CS50:
+#INSERCIONESSQLUXE.sql
